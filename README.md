@@ -1,4 +1,4 @@
-# hn_job_locations
+# HNJobLocations
 
 
 ## Idea
