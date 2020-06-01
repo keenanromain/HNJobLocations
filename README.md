@@ -2,7 +2,7 @@
 
 
 ## Idea
-I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for job postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the previous month, the previous 12 months, or all time. This project was built with Go version 1.13 on MacOS.
+I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for job postings based on a supplied location keyword. As of the time of writing, the code supports jobs posted in the previous month, the previous 12 months, or all time. The full list of postings is not done yet however. This project was built with Go version 1.13 on MacOS.
 
 ## Example 
 ![austin](https://user-images.githubusercontent.com/13093517/83374930-25f08700-a39b-11ea-8aac-288c03b997bd.gif)
