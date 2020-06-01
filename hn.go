@@ -183,8 +183,8 @@ func findCityInComments(post post, cityName string) []string {
 }
 
 func createFile(results [][]string, cityName string) {
-	// creat
-	fileName := strings.ReplaceAll(strings.ToLower(cityName), " ", "_") + ".html"
+	// make the HTML file
+    fileName := strings.ReplaceAll(strings.ToLower(cityName), " ", "_") + ".html"
 	if _, err := os.Stat(fileName); err == nil {
 		os.Remove(fileName)
 	}
