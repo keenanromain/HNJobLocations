@@ -300,13 +300,3 @@ func main() {
 		createFile(results, cityName)
 	}
 }
-
-/*
-Optimization:
-- Read into the same single struct already in memory rather than make multiple copies.
-- See how to reduce the number of api calls. If the api doesn't support larger
-dumps of data, perhaps look into using a web scraper.
-- Investigate the necessity of ioutil.ReadAll() on the response body
-- Additional command line arguments such as "2020", "2019", and so on
-- Convert list.txt to list.yaml for logical grouping of HN links
-*/
