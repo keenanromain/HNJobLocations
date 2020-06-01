@@ -2,7 +2,7 @@
 
 
 ## Idea
-I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the most recent month, the jobs posted in the previous 12 months, or all jobs ever posted. This project was built with Go version 1.13 on MacOS.
+I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for job postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the previous month, the previous 12 months, or all time. This project was built with Go version 1.13 on MacOS.
 
 
 ## Usage
