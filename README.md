@@ -3,7 +3,7 @@
 
 ```
 To correctly run this program, please supply two additional arguments within quotations.
-	These additional arguments are used to specify the desired location and the recency of the results.
+These additional arguments are used to specify the desired location and the recency of the results.
 	
 	E.g.:
 	- go run hn.go "New York City" "latest"
