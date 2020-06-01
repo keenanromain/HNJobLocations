@@ -5,7 +5,7 @@
 I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for job postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the previous month, the previous 12 months, or all time. This project was built with Go version 1.13 on MacOS.
 
 ## Example 
-
+![Screen Shot 2020-05-31 at 11 33 19 PM](https://user-images.githubusercontent.com/13093517/83373712-4ae2fb00-a397-11ea-8186-09b57ad5a12b.png)
 
 
 ## Usage
