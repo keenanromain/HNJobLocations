@@ -4,6 +4,9 @@
 ## Idea
 I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for job postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the previous month, the previous 12 months, or all time. This project was built with Go version 1.13 on MacOS.
 
+## Example 
+
+
 
 ## Usage
 ```
@@ -25,4 +28,4 @@ These additional arguments are used to specify the desired location and the rece
 - Additional command line arguments such as "2020", "2019", and so on
 - Convert list.txt to list.yaml for logical grouping of HN links
 - Split hn.go into multiple files for cleaner organization
-- Use concurrency to reduce run time 
+- Use concurrency when hitting the HN API so that the runtime is reduced 
