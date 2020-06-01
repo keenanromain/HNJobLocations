@@ -5,8 +5,7 @@
 I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for job postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the previous month, the previous 12 months, or all time. This project was built with Go version 1.13 on MacOS.
 
 ## Example 
-![Screen Shot 2020-05-31 at 11 33 19 PM](https://user-images.githubusercontent.com/13093517/83373712-4ae2fb00-a397-11ea-8186-09b57ad5a12b.png)
-
+![austin](https://user-images.githubusercontent.com/13093517/83374930-25f08700-a39b-11ea-8aac-288c03b997bd.gif)
 
 ## Usage
 ```
@@ -19,13 +18,12 @@ These additional arguments are used to specify the desired location and the rece
 	- go run hn.go "Singapore" "all"
 ```
 
-## Improvements (Notes to self)
+## TODO:
 
-
-- Read into the same single struct already in memory rather than make multiple copies
-- See how to reduce the number of api calls. If the api doesn't support larger dumps of data, perhaps look into using a web scraper.
+- Read API response into the same single struct already in memory rather than make multiple copies
+- See how to reduce the number of API calls. If the API doesn't support larger dumps of data, perhaps look into using a web scraper.
 - Investigate the necessity of ioutil.ReadAll() on the response body
-- Additional command line arguments such as "2020", "2019", and so on
-- Convert list.txt to list.yaml for logical grouping of HN links
-- Split hn.go into multiple files for cleaner organization
+- Additional command line arguments such as "2020", "2019", etc.
+- Convert list.txt to list.yaml for more logical groupings of HN links
+- Split hn.go into multiple files for better organization
 - Use concurrency when hitting the HN API so that the runtime is reduced 
