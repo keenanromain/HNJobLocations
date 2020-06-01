@@ -2,7 +2,7 @@
 
 
 ## Idea
-I wanted to get back into writing Go, so I built an application that filters through the HackerNews API for historic postings based on a location keyword. This project was built with Go version 1.13 on MacOS.
+I wanted to get back into writing Go, so I built an application that filters through *Ask HN: Who is Hiring?* threads for postings based on a supplied location keyword. As of the time of writing, the results include the jobs posted in the most recent month, the jobs posted in the previous 12 months, or all jobs ever posted. This project was built with Go version 1.13 on MacOS.
 
 
 ## Usage
@@ -24,4 +24,5 @@ These additional arguments are used to specify the desired location and the rece
 - Investigate the necessity of ioutil.ReadAll() on the response body
 - Additional command line arguments such as "2020", "2019", and so on
 - Convert list.txt to list.yaml for logical grouping of HN links
-- Split hn.go into multiple files for better organization
+- Split hn.go into multiple files for cleaner organization
+- Use concurrency to reduce run time 
