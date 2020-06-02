@@ -17,6 +17,7 @@ These additional arguments are used to specify the desired location and the rece
 	- go run hn.go "Berlin" "year"
 	- go run hn.go "Singapore" "all"
 ```
+The program will write the results to an HTML file in your cloned directory. The file is named in snake case after your choosen location keyword (such as `los_angeles.html` or `denver.html`).
 
 ## TODO:
 
