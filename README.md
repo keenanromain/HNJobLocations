@@ -25,6 +25,7 @@ The program will write the results to an HTML file in your cloned directory. The
 - See how to reduce the number of API calls. If the API doesn't support larger dumps of data, perhaps look into using a web scraper.
 - Investigate the necessity of ioutil.ReadAll() on the response body
 - Additional command line arguments such as "2020", "2019", etc.
-- Convert list.txt to list.yaml for more logical groupings of HN links
+- Convert list.txt into list.yaml for more logical groupings of HN links
 - Split hn.go into multiple files for better organization
 - Use concurrency when hitting the HN API so that the runtime is reduced 
+- convert second command line argument into a flag so that "all" becomes -a or --all
