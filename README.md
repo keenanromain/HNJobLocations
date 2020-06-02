@@ -28,4 +28,4 @@ The program will write the results to an HTML file in your cloned directory. The
 - Convert list.txt into list.yaml for more logical groupings of HN links
 - Split hn.go into multiple files for better organization
 - Use concurrency when hitting the HN API so that the runtime is reduced 
-- convert second command line argument into a flag so that "all" becomes -a or --all
+- convert second command line argument into a flag so that "all" becomes -a or --all, "latest" becomes -l or --latest, etc.
