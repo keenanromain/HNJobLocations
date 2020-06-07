@@ -23,7 +23,7 @@ The options are as follows:
 	-l, --latest		Results from the most recent monthly thread.
 	-p, --pastYear		Results from the past 12 months.
 ```
-The program will write the results to an HTML file in your cloned directory. The file is named in snake case after your choosen location keyword (such as `los_angeles.html` or `barcelona.html`).
+The program will write the results to an HTML file in your cloned directory. The file is named in snake case after your supplied location search term (e.g. `los_angeles.html` or `barcelona.html`).
 
 ## TODO:
 
