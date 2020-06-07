@@ -119,13 +119,20 @@ func validateURL(site string) string {
 
 func printUsage() {
 	usage := `
-	To correctly run this program, please supply two additional arguments within quotations.
-	These additional arguments are used to specify the desired location and the recency of the results.
+	To correctly run this program, you must supply two additional command line arguments.
+	The first argument is the search term enclosed within quotations.
+	The second argument is a flag used to specify the recency of the results.
 	
 	E.g.:
-	- go run hn.go "New York City" "latest"
-	- go run hn.go "Berlin" "year"
-	- go run hn.go "Singapore" "all"
+		go run hn.go "New York City" --latest
+		go run hn.go "Berlin" -a
+		go run hn.go "Singapore" --pastYear
+
+	The flag options are as follows:
+		-a, --all   		All results from previous Who's Hiring threads.
+		-l, --latest		Results from the most recent month's thread.
+		-p, --pastYear		Results from the past 12 months of threads.
+
 	`
 	fmt.Println(usage)
 	os.Exit(0)
@@ -251,35 +258,36 @@ func readFile() []string {
 	return list
 }
 
-func validateArgs(args []string) bool {
-	if len(args) == 3 {
-		var arguments = []string{"latest", "year", "all"}
-
-		for _, item := range arguments {
-			if item == args[2] {
-				return true
-			}
-		}
+func checkFlag(arg string) int {
+	if arg == "-a" || arg == "--all" {
+		return 1
+	} else if arg == "-l" || arg == "--latest"{
+		return 2
+	} else if arg == "-p" || arg == "--pastYear" {
+		return 3
 	}
-	return false
+	return 0
 }
 
-func parseArgs(args []string) (string, int) {
-	cityName := strings.Title(string(args[1]))
-	limitations := map[string]int{
-		"all":    -1,
-		"latest": 1,
-		"year":   12,
+func processArgs(args []string) (string, int) {
+	if len(args) != 3 {
+		printUsage()
 	}
-	return cityName, limitations[strings.ToLower(string(args[2]))]
+	flag := checkFlag(args[2])
+	if flag == 0 {
+		printUsage()
+	}
+	cityName := strings.Title(string(args[1]))
+	limitations := map[int]int{
+		1: -1,
+		2: 1,
+		3: 12,
+	}
+	return cityName, limitations[flag]
 }
 
 func main() {
-	args := os.Args
-	if !validateArgs(args) {
-		printUsage()
-	}
-	cityName, limit := parseArgs(args)
+	cityName, limit := processArgs(os.Args)
 	list := readFile()
 	var results [][]string
 
