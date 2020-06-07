@@ -9,13 +9,19 @@ I wanted to get back into writing Go, so I built an application that filters thr
 
 ## Usage
 ```
-To correctly run this program, please supply two additional arguments within quotations.
-These additional arguments are used to specify the desired location and the recency of the results.
-	
-	E.g.:
-	- go run hn.go "New York City" "latest"
-	- go run hn.go "Berlin" "year"
-	- go run hn.go "Singapore" "all"
+To correctly run this program, please supply two additional arguments.
+The first argument is the search term used to find hits of the desired location.
+The second argument is a flag used to specify the recency of the results.
+
+E.g.:
+	go run hn.go "New York City" --latest
+	go run hn.go "Berlin" -a
+	go run hn.go "Singapore" --pastYear
+
+The options are as follows:
+	-a, --all   		All results from previous Who's Hiring threads.
+	-l, --latest		Results from the most recent monthly thread.
+	-p, --pastYear		Results from the past 12 months.
 ```
 The program will write the results to an HTML file in your cloned directory. The file is named in snake case after your choosen location keyword (such as `los_angeles.html` or `barcelona.html`).
 
@@ -28,4 +34,3 @@ The program will write the results to an HTML file in your cloned directory. The
 - Convert list.txt into list.yaml for more logical groupings of HN links
 - Split hn.go into multiple files for better organization
 - Use concurrency when hitting the HN API so that the runtime is reduced 
-- convert second command line argument into a flag so that "all" becomes -a or --all, "latest" becomes -l or --latest, etc.
